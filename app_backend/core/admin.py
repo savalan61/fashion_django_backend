@@ -11,6 +11,7 @@ class CategoryModelAdmin(admin.ModelAdmin):
         return '-'
     image_tag.short_description = 'Image'
 
+
 class BrandModelAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'image_tag')
     
