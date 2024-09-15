@@ -31,4 +31,7 @@ urlpatterns = [
 
     #--------------------------------------------------------------------- Post -----------------------------------------------
     path('categories/create/', views.CategoryCreateView.as_view(), name='category-create'),
+    path('brands/create/', views.BrandCreateView.as_view(), name='brand-create'),
+    path('products/create/', views.ProductCreateView.as_view(), name = 'product-create'),
+    
 ]

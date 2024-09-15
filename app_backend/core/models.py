@@ -1,5 +1,8 @@
 from django.utils import timezone
 from django.db import models
+from django.contrib import admin
+from django.utils.html import format_html
+
 
 class CategoryModel(models.Model):
     title = models.CharField(max_length=255, unique=True)  
@@ -43,3 +46,29 @@ class ProductModel(models.Model):
     class Meta:
         verbose_name = "Product"
         verbose_name_plural = "Products"
+
+
+
+# ------------------------ Admin Panel Models --------------------------------------
+class CategoryModelAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'image_tag')
+    
+    def image_tag(self, obj):
+        if obj.imageUrl:
+            return format_html('<img src="{}" width="100" height="100" />', obj.imageUrl)
+        return '-'
+    image_tag.short_description = 'Image'
+
+class BrandModelAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'image_tag')
+    
+    def image_tag(self, obj):
+        if obj.imageUrl:
+            return format_html('<img src="{}" width="100" height="100" />', obj.imageUrl)
+        return '-'
+    image_tag.short_description = 'Image'
+
+class ProductModelAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'price', 'rating', 'category', 'brand')
+
+
