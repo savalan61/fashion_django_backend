@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-8b-av5b2w^0lsogmb+sy=$9vf4%uwv4%am)23p$4!qmax)qz1-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fashiondjangobackend-production.up.railway.app', '127.0.0.1', 'localhost']
+
 
 ALLOWED_HOSTS = [
     '127.0.0.1',  
