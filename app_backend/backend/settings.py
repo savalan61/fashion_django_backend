@@ -25,14 +25,13 @@ SECRET_KEY = 'django-insecure-8b-av5b2w^0lsogmb+sy=$9vf4%uwv4%am)23p$4!qmax)qz1-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fashiondjangobackend-production.up.railway.app', '127.0.0.1', 'localhost']
-
 
 ALLOWED_HOSTS = [
+    '192.168.1.6',  
     '127.0.0.1',  
     'localhost',  
     '10.0.2.2',  
-    'yourdomain.com',  
+    'fashiondjangobackend-production.up.railway.app'
 ]
 
 # Application definition
@@ -49,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     'core',
+    'wishlist'
 ]
 
 MIDDLEWARE = [
@@ -128,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+DEBUG = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

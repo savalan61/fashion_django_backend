@@ -1,0 +1,14 @@
+ {
+    "builds": [{
+        "src": "app_backend/wsgi.py",
+        "use": "@savalan/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "app_backend/wsgi.py"
+        }
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }] 
+}
