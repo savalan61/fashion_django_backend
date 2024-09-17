@@ -12,7 +12,6 @@ class CategoryList(generics.ListAPIView):
     queryset = models.CategoryModel.objects.all()
 
 ### ******************************************************** Get Random 5 Categories For HomePage ********************************************************
-
 class HomeCategoryList(generics.ListAPIView):
     serializer_class = serializers.CategorySerializer
 
@@ -44,6 +43,7 @@ class PopularProductList(generics.ListAPIView):
         return models.ProductModel.objects.filter(rating__gte=4.0, rating__lte=5.0).order_by('?')[:20]
 
 ### ******************************************************** Get Products By Type Of Clothes ********************************************************
+
 class ProductListByClothesType(generics.ListAPIView):
     serializer_class = serializers.ProductSerializer
 
