@@ -10,6 +10,6 @@ urlpatterns = [
 
     
     path('api/', include('core.urls')),
-    path('api/wishlist/', include('wishlist.urls')),
+    path('api/favoriteList/', include('favoriteList.urls')),
     
 ]

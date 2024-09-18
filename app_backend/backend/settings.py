@@ -23,7 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8b-av5b2w^0lsogmb+sy=$9vf4%uwv4%am)23p$4!qmax)qz1-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 
 ALLOWED_HOSTS = [
@@ -48,7 +47,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     'core',
-    'wishlist'
+    'favoriteList',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +128,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 DEBUG = True
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
